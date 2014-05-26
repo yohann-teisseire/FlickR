@@ -22,7 +22,8 @@
 @property (weak,nonatomic) id<ReaderViewDelegate>delegate;
 
 
--(void) displayPageAtIndex:(int)index;
+-(void) displayPageAtIndex:(int)index animated:(BOOL) animated;
+
 
 
 @end

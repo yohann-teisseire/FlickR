@@ -31,18 +31,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.readerView.delegate = self;
-    [self.readerView displayPageAtIndex:0];
+    [self.readerView displayPageAtIndex:0 animated:NO];
 }
 
 -(int)numberOfPages{
     return 4;
 }
 
+
 -(UIView *)pageAtIndex:(int)index{
     NSString * imageName = [NSString stringWithFormat:@"image%i.jpg",index];
     
     UIImage * image = [UIImage imageNamed:imageName];
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
+    imageView.frame = self.readerView.bounds;
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
     return imageView;
 }
 

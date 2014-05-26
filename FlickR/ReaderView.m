@@ -8,6 +8,12 @@
 
 #import "ReaderView.h"
 
+@interface ReaderView()
+
+@property(nonatomic,assign)int index;
+
+@end
+
 @implementation ReaderView
 
 - (id)initWithFrame:(CGRect)frame
@@ -19,10 +25,45 @@
     return self;
 }
 
--(void)displayPageAtIndex:(int)index{
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    if(!self.gestureRecognizers.count){
+        
+        UISwipeGestureRecognizer *  nextRecognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(nextPage)];
+        nextRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+        [self addGestureRecognizer:nextRecognizer];
+        
+        
+        UISwipeGestureRecognizer *  beforeRecognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(beforePage)];
+        beforeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+        [self addGestureRecognizer:beforeRecognizer];
+        
+        self.userInteractionEnabled = YES;
+    }
+    
+}
+
+-(void)beforePage{
+    [self displayPageAtIndex:self.index-1 animated:YES];
+}
+
+-(void)nextPage{
+    [self displayPageAtIndex:self.index+1 animated:YES];
+}
+
+
+-(void)displayPageAtIndex:(int)index animated:(BOOL)animated{
     if(index >= 0 && index < [self.delegate numberOfPages]){
         UIView * view = [self.delegate pageAtIndex:index];
-        [self addSubview:view];
+        [UIView transitionWithView:self
+        duration:animated ? 1 : 0
+        options:UIViewAnimationOptionTransitionCrossDissolve
+        animations:^{
+            [self.subviews.lastObject removeFromSuperview];
+            [self addSubview:view];
+        }
+        completion:nil];
+        self.index = index;
     }
 }
 

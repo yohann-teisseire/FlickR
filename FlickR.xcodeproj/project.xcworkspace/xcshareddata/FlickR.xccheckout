@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A018D84C-7A5D-4012-8D31-ACF9AFD7BFDB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlickR</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AAB11795-B46F-4C12-951D-10027B5117BE</key>
+		<string>https://github.com/yohann-teisseire/FlickR.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FlickR.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AAB11795-B46F-4C12-951D-10027B5117BE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yohann-teisseire/FlickR.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AAB11795-B46F-4C12-951D-10027B5117BE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AAB11795-B46F-4C12-951D-10027B5117BE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>flickr</string>
+		</dict>
+	</array>
+</dict>
+</plist>
