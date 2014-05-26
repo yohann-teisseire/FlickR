@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A606AE0B1933AECD00051D85 /* FlickRPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = A606AE0A1933AECD00051D85 /* FlickRPicture.m */; };
 		A60BA1531924E1B60074CB8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60BA1521924E1B60074CB8D /* Foundation.framework */; };
 		A60BA1551924E1B60074CB8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60BA1541924E1B60074CB8D /* CoreGraphics.framework */; };
 		A60BA1571924E1B60074CB8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60BA1561924E1B60074CB8D /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A606AE091933AECD00051D85 /* FlickRPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickRPicture.h; sourceTree = "<group>"; };
+		A606AE0A1933AECD00051D85 /* FlickRPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickRPicture.m; sourceTree = "<group>"; };
 		A60BA14F1924E1B60074CB8D /* FlickR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60BA1521924E1B60074CB8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A60BA1541924E1B60074CB8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,6 +148,8 @@
 				A60BA1691924E1B70074CB8D /* Images.xcassets */,
 				A60BA1661924E1B70074CB8D /* FlickR.xcdatamodeld */,
 				A60BA15B1924E1B70074CB8D /* Supporting Files */,
+				A606AE091933AECD00051D85 /* FlickRPicture.h */,
+				A606AE0A1933AECD00051D85 /* FlickRPicture.m */,
 			);
 			path = FlickR;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				A60BA1681924E1B70074CB8D /* FlickR.xcdatamodeld in Sources */,
 				A60BA1961924EE750074CB8D /* PictureViewController.m in Sources */,
 				A60BA1931924EAB40074CB8D /* ReaderView.m in Sources */,
+				A606AE0B1933AECD00051D85 /* FlickRPicture.m in Sources */,
 				A60BA1651924E1B70074CB8D /* AppDelegate.m in Sources */,
 				A60BA1611924E1B70074CB8D /* main.m in Sources */,
 			);

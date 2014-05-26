@@ -57,7 +57,9 @@
         UIView * view = [self.delegate pageAtIndex:index];
         [UIView transitionWithView:self
         duration:animated ? 1 : 0
-        options:UIViewAnimationOptionTransitionCrossDissolve
+        options: index>self.index?
+        UIViewAnimationOptionTransitionCurlUp:
+        UIViewAnimationOptionTransitionCurlDown
         animations:^{
             [self.subviews.lastObject removeFromSuperview];
             [self addSubview:view];
