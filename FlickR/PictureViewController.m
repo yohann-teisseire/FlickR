@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet ReaderView *readerView;
 
+@property(strong,nonatomic) NSArray * pictures;
+
 @end
 
 @implementation PictureViewController
@@ -30,19 +32,28 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    flickRLocation location;
+    location.latitude = 35;
+    location.longitude = 135;
+    self.location = location;
+    
+    self.pictures = [FlickRPicture picturesAroundLocation:self.location];
+    
     self.readerView.delegate = self;
     [self.readerView displayPageAtIndex:0 animated:NO];
 }
 
 -(int)numberOfPages{
-    return 4;
+    return (int)self.pictures.count;
 }
 
 
 -(UIView *)pageAtIndex:(int)index{
-    NSString * imageName = [NSString stringWithFormat:@"image%i.jpg",index];
+    FlickRPicture * picture = self.pictures[index];
+    NSData * imageData = [NSData dataWithContentsOfURL:picture.url];
     
-    UIImage * image = [UIImage imageNamed:imageName];
+    UIImage * image = [UIImage imageWithData:imageData];
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
     imageView.frame = self.readerView.bounds;
     imageView.contentMode = UIViewContentModeScaleAspectFit;
