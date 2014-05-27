@@ -38,10 +38,16 @@
     location.longitude = 135;
     self.location = location;
     
-    self.pictures = [FlickRPicture picturesAroundLocation:self.location];
     
-    self.readerView.delegate = self;
-    [self.readerView displayPageAtIndex:0 animated:NO];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        self.pictures = [FlickRPicture picturesAroundLocation:self.location];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.readerView.delegate = self;
+            [self.readerView displayPageAtIndex:0 animated:NO];
+        });
+        
+    });
+    
 }
 
 -(int)numberOfPages{
