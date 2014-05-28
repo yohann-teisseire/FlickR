@@ -56,13 +56,22 @@
 
 
 -(UIView *)pageAtIndex:(int)index{
-    FlickRPicture * picture = self.pictures[index];
-    NSData * imageData = [NSData dataWithContentsOfURL:picture.url];
     
-    UIImage * image = [UIImage imageWithData:imageData];
-    UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
+    UIImageView * imageView = [[UIImageView alloc]init];
     imageView.frame = self.readerView.bounds;
     imageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        FlickRPicture * picture = self.pictures[index];
+        NSData * imageData = [NSData dataWithContentsOfURL:picture.url];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+           UIImage * image = [UIImage imageWithData:imageData];
+            imageView.image = image;
+        });
+        
+    });
+    
     return imageView;
 }
 
