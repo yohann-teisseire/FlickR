@@ -33,10 +33,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    flickRLocation location;
+    /*flickRLocation location;
     location.latitude = 35;
     location.longitude = 135;
-    self.location = location;
+    self.location = location;*/
     
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{

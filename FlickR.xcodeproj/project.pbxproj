@@ -30,6 +30,11 @@
 		A60BA1901924E9B10074CB8D /* image0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A60BA18C1924E9B10074CB8D /* image0.jpg */; };
 		A60BA1931924EAB40074CB8D /* ReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A60BA1921924EAB40074CB8D /* ReaderView.m */; };
 		A60BA1961924EE750074CB8D /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60BA1951924EE750074CB8D /* PictureViewController.m */; };
+		A6A07CD91952D2140047748E /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A07CD81952D2140047748E /* City.m */; };
+		A6A07CDC1952D3490047748E /* City+CRUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A07CDB1952D3490047748E /* City+CRUD.m */; };
+		A6A07CDF1952DC590047748E /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A07CDE1952DC590047748E /* CityViewController.m */; };
+		A6A07CE11952EB920047748E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A07CE01952EB920047748E /* MapKit.framework */; };
+		A6A07CE41952EBD20047748E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A07CE31952EBD20047748E /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,15 @@
 		A60BA1921924EAB40074CB8D /* ReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderView.m; sourceTree = "<group>"; };
 		A60BA1941924EE750074CB8D /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
 		A60BA1951924EE750074CB8D /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
+		A6A07CD71952D2140047748E /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = City.h; path = ../City.h; sourceTree = "<group>"; };
+		A6A07CD81952D2140047748E /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = City.m; path = ../City.m; sourceTree = "<group>"; };
+		A6A07CDA1952D3490047748E /* City+CRUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "City+CRUD.h"; path = "../City+CRUD.h"; sourceTree = "<group>"; };
+		A6A07CDB1952D3490047748E /* City+CRUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "City+CRUD.m"; path = "../City+CRUD.m"; sourceTree = "<group>"; };
+		A6A07CDD1952DC590047748E /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityViewController.h; path = ../CityViewController.h; sourceTree = "<group>"; };
+		A6A07CDE1952DC590047748E /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityViewController.m; path = ../CityViewController.m; sourceTree = "<group>"; };
+		A6A07CE01952EB920047748E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A6A07CE21952EBD20047748E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		A6A07CE31952EBD20047748E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A07CE11952EB920047748E /* MapKit.framework in Frameworks */,
 				A60BA1551924E1B60074CB8D /* CoreGraphics.framework in Frameworks */,
 				A60BA1591924E1B70074CB8D /* CoreData.framework in Frameworks */,
 				A60BA1571924E1B60074CB8D /* UIKit.framework in Frameworks */,
@@ -103,6 +118,8 @@
 		A60BA1461924E1B60074CB8D = {
 			isa = PBXGroup;
 			children = (
+				A6A07CE21952EBD20047748E /* MapViewController.h */,
+				A6A07CE31952EBD20047748E /* MapViewController.m */,
 				A60BA15A1924E1B70074CB8D /* FlickR */,
 				A60BA1771924E1B70074CB8D /* FlickRTests */,
 				A60BA1511924E1B60074CB8D /* Frameworks */,
@@ -122,6 +139,7 @@
 		A60BA1511924E1B60074CB8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6A07CE01952EB920047748E /* MapKit.framework */,
 				A60BA1521924E1B60074CB8D /* Foundation.framework */,
 				A60BA1541924E1B60074CB8D /* CoreGraphics.framework */,
 				A60BA1561924E1B60074CB8D /* UIKit.framework */,
@@ -134,6 +152,14 @@
 		A60BA15A1924E1B70074CB8D /* FlickR */ = {
 			isa = PBXGroup;
 			children = (
+				A6A07CD71952D2140047748E /* City.h */,
+				A6A07CD81952D2140047748E /* City.m */,
+				A6A07CDA1952D3490047748E /* City+CRUD.h */,
+				A6A07CDB1952D3490047748E /* City+CRUD.m */,
+				A6A07CDD1952DC590047748E /* CityViewController.h */,
+				A6A07CDE1952DC590047748E /* CityViewController.m */,
+				A606AE091933AECD00051D85 /* FlickRPicture.h */,
+				A606AE0A1933AECD00051D85 /* FlickRPicture.m */,
 				A60BA1631924E1B70074CB8D /* AppDelegate.h */,
 				A60BA1641924E1B70074CB8D /* AppDelegate.m */,
 				A60BA1871924E4560074CB8D /* Storyboard.storyboard */,
@@ -148,8 +174,6 @@
 				A60BA1691924E1B70074CB8D /* Images.xcassets */,
 				A60BA1661924E1B70074CB8D /* FlickR.xcdatamodeld */,
 				A60BA15B1924E1B70074CB8D /* Supporting Files */,
-				A606AE091933AECD00051D85 /* FlickRPicture.h */,
-				A606AE0A1933AECD00051D85 /* FlickRPicture.m */,
 			);
 			path = FlickR;
 			sourceTree = "<group>";
@@ -283,11 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A07CDC1952D3490047748E /* City+CRUD.m in Sources */,
 				A60BA1681924E1B70074CB8D /* FlickR.xcdatamodeld in Sources */,
 				A60BA1961924EE750074CB8D /* PictureViewController.m in Sources */,
 				A60BA1931924EAB40074CB8D /* ReaderView.m in Sources */,
 				A606AE0B1933AECD00051D85 /* FlickRPicture.m in Sources */,
 				A60BA1651924E1B70074CB8D /* AppDelegate.m in Sources */,
+				A6A07CDF1952DC590047748E /* CityViewController.m in Sources */,
+				A6A07CE41952EBD20047748E /* MapViewController.m in Sources */,
+				A6A07CD91952D2140047748E /* City.m in Sources */,
 				A60BA1611924E1B70074CB8D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
